@@ -30,4 +30,4 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-bootJar.archiveName 'Root.jar'
+bootJar.archiveName 'ROOT.jar'
