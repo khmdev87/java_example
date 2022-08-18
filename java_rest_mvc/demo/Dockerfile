@@ -27,4 +27,12 @@ RUN add-apt-repository ppa:openjdk-r/ppa \
     && update-alternatives --config java \
     && ln -s /usr/lib/jvm/java-11-oracle /opt/java
 
-RUN keytool -storepass changeit -list -cacerts | gres 'Keystore'
+# Copy to the home
+COPY ${JAR_FILE} ${WORKING_HOME}/${JAR_FILE}
+
+# Port
+EXPOSE 8080
+WORKDIR ${WORKING_HOME}
+
+# EXCUTE
+ENTRYPOINT java -Dspring.profiles.active=${env} -jar ${WORKING_HOME}/${JAR_FILE}
