@@ -16,7 +16,7 @@ RUN set -e \
     && mkdir -m 755 -p ${WORKING_HOME}
     
 # Install Dependencies
-RUN apt-get update &&
+RUN apt-get update && \
 apt-get install -y curl wget unzip tar dos2unix software-properties-common && \
 apt-get -y install sudo
 
