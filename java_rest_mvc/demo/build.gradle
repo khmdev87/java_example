@@ -24,6 +24,11 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//mybatis 
+	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.2'
+	//postgre driver
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.4.0'
 }
 
 tasks.named('test') {
