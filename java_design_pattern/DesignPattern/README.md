@@ -1,18 +1,23 @@
-## Getting Started
+-singleton : 객체하나만 선언하여 게속 쓰는 것
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+-strategy :  옵션들 마다 행동들을 모듈화해서 독립적이고 상호 교체 가능한것이 strategy 전략 패턴이다. [전략 패턴은 같은일을 하되 그 알고리즘이나 방식이 갈아끼어지는것]
 
-## Folder Structure
+-state : 옵션들의 행동을 모듈화하는건 같지만 전환의 개념으로 상태를 게속 변경시켜 주는 패턴을 State 패턴이라한다
 
-The workspace contains two folders by default, where:
+-command : strategy와 유사하지만 같은일을 하되가 아니라 (동일 메서드) 아예 다른일을 하는(다른메서드)를 커맨드 패턴이라한다.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+-adapter : 아예 다른 메서드 또는 모듈을 어답터를 통해 사용하는 패턴을 adapter 패턴이라한다.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+-proxy : 가벼운일과 무거운일을 분리해서 평소에는 가벼운일로하다가 정말 필요한일이 생기면 무거운일을 할수 있도록 코드를 짜놓은 디자인을 proxy패턴이라 한다
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+-asade : 패턴이란 인식 없이 널리 사용되고 있는, 가장 단순하다고 할 수 있는 패턴입니다.
 
-## Dependency Management
+-template method : 전체 절차는 정해져 있지만 세부 절차를 자식 클래스로 다양화할 수 있는 패턴입니다.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+-decorator :  객체를 다른 객체에 넣어 기능을 추가하는 방식 바로 이해하기 낯설지만 잘 활용하면 정말 유용한 패턴입니다.
+
+-factory method :클래스를 선택하고 객체를 고르는 일은 이제 공장 형태로 제공하는 패턴
+
+-abstract factory : 공장을 추상화하여 다양화하기 위한 패턴입니다.
+
+-mediator : 한 클래스에서의 이벤트가 연결된 다른 클래스의 객체에 영향을 미칠 때 미디에이터 패턴으로 효율적인 설계를 할 수 있습니다.
