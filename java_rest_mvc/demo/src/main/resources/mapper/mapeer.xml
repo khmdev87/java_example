@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.mapper.Mapper">
-
-    <select id="SelectPersons" resultType="com.example.demo.model.demo.Person">
-		select id, name, age, major from demo.develop.person 
-    </select>
-
+<mapper namespace="com.example.demo.mapper.MainMapper">
+	<select id="SelectPersons" resultType="com.example.demo.model.demo.Person">
+		select id, name, age, major from demo.develop.person order by id asc
+	</select>
+	<select id="SelectPerson" parameterType="int" resultType="com.example.demo.model.demo.Person">
+		select id, name, age, major from demo.develop.person where id = #{id}
+	</select>
+	<insert id="InsertPerson" parameterType="hashMap">
+		insert into demo.develop.person(name, age, major) values(#{name},#{age},#{major})
+	</insert>
+	<delete id="DeletePerson" parameterType="int">
+		delete from demo.develop.person where id = #{id}
+	</delete>
+	<update id="UpdatePerson" parameterType="hashMap">
+		update demo.develop.person set
+		name = #{name},
+		age = #{age},
+		major = #{major}
+		where id = #{id}
+	</update>
 </mapper>

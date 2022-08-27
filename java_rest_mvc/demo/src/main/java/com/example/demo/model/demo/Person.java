@@ -1,8 +1,12 @@
 package com.example.demo.model.demo;
 
 import com.example.demo.model.common.BaseDto;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 public class Person extends BaseDto {
+
+    @JsonInclude(Include.NON_NULL)
     private String id;
     private String name;
     private String age;
