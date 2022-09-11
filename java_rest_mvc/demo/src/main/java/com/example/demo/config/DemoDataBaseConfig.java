@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.config;
 
 import javax.sql.DataSource;
 
@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @MapperScan(basePackages = "com.example.demo.mapper", annotationClass = org.apache.ibatis.annotations.Mapper.class, sqlSessionFactoryRef = "sqlSessionFactory")
 @EnableTransactionManagement
-public class DatabaseConfig {
+public class DemoDataBaseConfig{
 
     @Bean(name = "sqlSessionFactory")
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
